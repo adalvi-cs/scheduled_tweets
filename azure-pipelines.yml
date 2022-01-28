@@ -22,5 +22,5 @@ steps:
 - script: bundle exec rake db:migrate RAILS_ENV=development
   displayName: 'bundle exec rake db:migrate'
 
-- script: bundle exec rake
+- script: bundle exec rake RAILS_ENV=development
   displayName: 'bundle exec rake'
