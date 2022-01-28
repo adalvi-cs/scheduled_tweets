@@ -19,8 +19,8 @@ steps:
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
-- script: bundle exec rake db:migrate
-  displayName: 'bundle exec rake db:migrate RAILS_ENV=development'
+- script: bundle exec rake db:migrate RAILS_ENV=development
+  displayName: 'bundle exec rake db:migrate'
 
 - script: bundle exec rake
   displayName: 'bundle exec rake'
