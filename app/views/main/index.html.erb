@@ -1,12 +1,14 @@
 <div class="d-flex align-items-center justify-content-center">
 	<h1>Welcome to scheduled tweets...</h1>
 
-  <% if @user %>
-    Logged in as <%= @user.email %>
+  <!--% if @user %-->
+<!--    Logged in as <!-%= @user.email %-->
 
-    <!--% link_to "logout", logout_path, method: :delete %-->
+   <!--% if Current.user %-->
+    <!--Logged in as <--%= Current.use %>
+    <--% link_to "logout", logout_path, method: :delete %-->
     <!--using button is symantically more correct. it generates form around this and has JS that uses hidden input to use method delete-->
-    <%= button_to "Logout", logout_path, method: :delete %>
+    <!--%= button_to "Logout", logout_path, method: :delete %>
 
-  <% end %>
+  <--% end %-->
 </div>
