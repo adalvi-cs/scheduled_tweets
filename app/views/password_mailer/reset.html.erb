@@ -1,5 +1,8 @@
-<h1>Password#reset</h1>
+Hi <%= params[:user].email %>,
 
-<p>
-  <%= @greeting %>, find me in app/views/password_mailer/reset.html.erb
-</p>
+Someone requested password reset for you.
+
+If this was you, click on the link below to reset the password. This link will expire in 10 minutes.
+
+<!--this needs tobe  a url as it should be a full absolute http url and not path since it is not website -->
+<%= link_to "Reset password", password_reset_edit_url(token: @token) %>
