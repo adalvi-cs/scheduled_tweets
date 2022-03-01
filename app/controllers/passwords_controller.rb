@@ -1,6 +1,6 @@
 class PasswordsController < ApplicationController
   # make sure user is logged in
-  before_action :require_user_logged_in
+  before_action :require_user_logged_in!
 
   def edit
 
