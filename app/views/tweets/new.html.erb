@@ -1,0 +1,18 @@
+<h1>Schedule A Tweet</h1>
+
+<%= form_with model: @tweet do |form| %>
+  <div class="mb-3">
+    <%= form.label :twitter_account_id %>
+    <%= form.collection_select :twitter_account_id, Current.user.twitter_accounts, :id, :username, {}, { class: "form-control"} %>
+    <%= button_to "Connect your Twitter Account", "/auth/twitter", method: :post, data: {turbo:false} %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :publish_at %>
+    <div class="form-control">
+      <%= form.datetime_select :publish_at %>
+    </div>
+  </div>
+
+  <%= form.button "Schedule", class: "btn btn-primary" %>
+<% end %>

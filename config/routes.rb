@@ -32,5 +32,7 @@ Rails.application.routes.draw do
   #get "twitter_accounts/:id"
   #delete "twitter_accounts/:id"
 
+  resources :tweets
+
   root to: "main#index"
 end
