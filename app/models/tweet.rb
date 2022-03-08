@@ -13,4 +13,9 @@ class Tweet < ApplicationRecord
     self.publish_at ||= 24.hours.from_now
   end
 
+  def published?
+    #return true if has value. false if nil
+    tweet_id?
+  end
+
 end
