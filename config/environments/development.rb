@@ -70,4 +70,8 @@ Rails.application.configure do
 
   #set for mailer to know what host deployed on
   config.action_mailer.default_url_options = { host: "localhost:3000" }
+
+  # use sidekiq instead of out of box active job from rails
+  config.active_job.queue_adapter = :sidekiq
+
 end

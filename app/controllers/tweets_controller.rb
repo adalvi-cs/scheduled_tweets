@@ -15,6 +15,8 @@ class TweetsController < ApplicationController
     # @tweet = Current.user.tweets.create(tweet_params)
     @tweet = Current.user.tweets.new(tweet_params)
     if @tweet.save
+      # TweetJob.perform_later(@tweet)
+      #TweetJob.set(wait_until: @tweet.publish_at).perform_later(@tweet)
       redirect_to tweets_path, notice: "Scheduled tweet successfully..."
       #redirect_to @tweet, notice: "Scheduled tweet successfully..."
     else
@@ -27,10 +29,17 @@ class TweetsController < ApplicationController
 
   def update
     if @tweet.update(tweet_params)
+      #TweetJob.set(wait_until: @tweet.publish_at).perform_later(@tweet)
       redirect_to tweets_path, notice: "Tweet was updated successfully"
     else
       render :edit
     end
+  end
+
+  #ONLY WORKAROUND TO GET DELETE WORK. Symantically incorrect.
+  def show
+    @tweet.destroy
+    redirect_to tweets_path, notice: "Tweet was unscheduled"
   end
 
   def destroy
