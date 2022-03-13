@@ -1,5 +1,5 @@
 class TwitterAccount < ApplicationRecord
-
+  #dependent: :destroy shall do cascade delete
   has_many :tweets, dependent: :destroy
   belongs_to :user
 
