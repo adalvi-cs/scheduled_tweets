@@ -62,6 +62,11 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    appmap (0.83.5)
+      activesupport
+      method_source
+      rack
+      reverse_markdown
     bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.9.3)
@@ -198,6 +203,8 @@ GEM
     regexp_parser (2.2.0)
     reline (0.2.7)
       io-console (~> 0.5)
+    reverse_markdown (2.1.1)
+      nokogiri
     rexml (3.2.5)
     rubyzip (2.3.2)
     selenium-webdriver (4.1.0)
@@ -264,6 +271,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  appmap
   bcrypt (~> 3.1.7)
   bootsnap
   capybara
@@ -289,4 +297,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.9
+   2.3.14
