@@ -7,7 +7,7 @@ ruby "3.0.3"
 
 gem 'appmap', :groups => [:development, :test]
 
-gem "rails", "~> 7.0.3", ">= 7.0.3.1"
+gem "rails", "~> 7.1.0"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -16,7 +16,7 @@ gem "sprockets-rails"
 gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.6", ">= 5.6.4"
+gem "puma", "~> 5.6", ">= 5.6.9"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
